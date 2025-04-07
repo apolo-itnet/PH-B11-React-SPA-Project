@@ -7,13 +7,12 @@ const Blog = ({blog, handleBookmark, handleMarkAsRead}) => {
   
   return (
     <div>
-      {/* <h1>{blog.id}</h1> */}
-      <div className="card bg-base-100 w-96 shadow-sm">
-        <figure className="px-10 pt-10">
+      <div className="card bg-base-100 w-96 shadow-sm m-2 ">
+        <figure className="">
           <img
             src={blog.cover}
             alt="Shoes"
-            className="rounded-xl"
+            className="rounded-tl-lg rounded-tr-lg w-full"
           />
         </figure>
         <div className="card-body items-center text-center">
@@ -27,7 +26,7 @@ const Blog = ({blog, handleBookmark, handleMarkAsRead}) => {
           </p>
           <div className="hastag-container flex gap-4">
             {
-            blog.hashtags.map((hash) => <p>{hash}</p>)
+            blog.hashtags.map((hash) => <p key={hash}>{hash}</p>)
           }
           </div>
           <div className="card-actions flex w-full justify-between">

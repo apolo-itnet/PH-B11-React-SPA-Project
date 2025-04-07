@@ -11,7 +11,7 @@ const Blogs = ({handleBookmark, handleMarkAsRead}) => {
     .then(data => setBlogs(data))
   }, [])
 
-  console.log(blogs)
+  // console.log(blogs)
 
   return (
     <div>
